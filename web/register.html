@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>Quiz</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <a href="index.html" class="logo">Quiz</a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="index.html" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">About</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">Recruiter Login</a>
+        </li>
+        <li>
+          <a href="register.html" class="nav-links">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="landing">
+      <div class="landing-text" style="padding-right: 20%; padding-left: 5%">
+        <h2>Your details</h2>
+        <form action="/register" method="POST">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your Name"
+          />
+          <input type="text" id="age" name="age" placeholder="Enter your Age" />
+          <input
+            type="text"
+            id="gender"
+            name="gender"
+            placeholder="Choose Gender"
+          />
+          <button type="submit" class="full-btn" style="height: 36px">
+            <a
+              href="quiz.html"
+              style="text-decoration: none; background: none; color: aliceblue"
+              >Start Test</a
+            >
+          </button>
+        </form>
+      </div>
+
+      <img src="./register.svg" style="height: 65vh; width: auto" />
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script src="https://use.fontawesome.com/3bfa7ea63a.js"></script>
+</html>
