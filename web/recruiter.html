@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>PD</title>
   </head>
@@ -28,35 +29,35 @@
     </nav>
     <div class="landing">
       <div class="landing-text" style="padding-right: 20%; padding-left: 5%">
-        <h2>Your details</h2>
-        <form method="POST" enctype="multipart/form-data">
-          <input type="text" id="id" name="id" placeholder="Applicant Id" />
+        <h2>Enter your credentials</h2>
+        <form role="form" id="signinForm">
           <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Applicant Name"
-          />
-          <input type="text" id="age" name="age" placeholder="Enter your Age" />
+            type="email"
+            id="loginID"
+            name="userid"
+            placeholder="E Mail ID"
+            required
+          /><br />
           <input
-            type="text"
-            id="gender"
-            name="gender"
-            placeholder="Choose Gender"
+            type="password"
+            id="loginPass"
+            name="password"
+            placeholder="Password"
+            required
           />
-          <button type="submit" class="full-btn" style="height: 42px">
-            <a
-              href="quiz.html"
-              style="text-decoration: none; background: none; color: aliceblue"
-              >Start Test</a
-            >
-          </button>
+          <button class="full-btn" type="submit" id="login-btn" style="height: 42px;">Login</button>
         </form>
       </div>
 
       <img src="./register.svg" style="height: 65vh; width: auto" />
     </div>
   </body>
-  <script src="script.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+  <script src="login.js"></script>
   <script src="https://use.fontawesome.com/3bfa7ea63a.js"></script>
 </html>
