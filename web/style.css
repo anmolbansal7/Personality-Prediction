@@ -165,18 +165,10 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 .question {
-  font-size: 30px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
-.answers {
-  margin-bottom: 20px;
-  text-align: left;
-  display: inline-block;
-}
-.answers label {
-  display: block;
-  margin-bottom: 10px;
-}
+
 button {
   width: auto;
   height: auto;
@@ -186,44 +178,33 @@ button {
   padding: 1%;
   cursor: pointer;
 }
-button#submit {
-  width: auto;
-  height: auto;
+#submit {
+  width: 250px;
+  height: 42px;
   border: 2px solid #091133;
   background: #091133;
   color: #e7ecff;
   font-size: 16px;
   padding: 1%;
   cursor: pointer;
+  margin-bottom: 5%;
 }
 button:hover {
   background-color: #e7ecff;
   transition: 1s;
 }
 
-.slide {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.active-slide {
-  opacity: 1;
-  z-index: 2;
-}
-.quiz-container {
-  position: relative;
-  height: 200px;
-  margin-top: 40px;
+.quiz-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding-left: 5%;
+  padding-top: 5%;
 }
 
-.quiz-main {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 25%;
+.quiz-main label{
+  padding-top:2%;
 }
 
 .data{

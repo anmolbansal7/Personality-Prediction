@@ -9,8 +9,6 @@
       type="text/css"
       href="{{ url_for('static', filename='style.css') }}"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <title>Quiz</title>
   </head>
   <body>
@@ -20,20 +18,41 @@
       </span>
       <a href="" class="logo">Quiz</a>
     </nav>
-    <form action="/" method="post" enctype="multipart/form-data">
-      <div class="quiz-main" id="quiz-main">
-        <div class="quiz-container">
-          <div id="quiz"></div>
-        </div>
-        <button id="previous">Previous Question</button>
-        <button id="next">Next Question</button>
-        <button type="submit" value="Submit" id="submit">Submit Quiz</button>
+    <div class="quiz-main" id="quiz-main">
+      <form method="POST" action="/">
+      <div class="question">
+        <label> Question 1</label><br>
+        <input type="radio" value="1" name="mycheckbox"> 1. Choice<br>
+        <input type="radio" value="2" name="mycheckbox"> 2. Choice<br>
+        <input type="radio" value="3" name="mycheckbox"> 3. Choice<br>
+        <input type="radio" value="4" name="mycheckbox"> 4. Choice<br>
+        <br><br><label> Question2</label><br>
+        <input type="radio" value="1" name="mycheckbox1"> 1. Choice<br>
+        <input type="radio" value="2" name="mycheckbox1"> 2. Choice<br>
+        <input type="radio" value="3" name="mycheckbox1"> 3. Choice<br>
+        <input type="radio" value="4" name="mycheckbox1"> 4. Choice<br>
+        <br><br><label> Question3</label><br>
+        <input type="radio" value="1" name="mycheckbox1"> 1. Choice<br>
+        <input type="radio" value="2" name="mycheckbox1"> 2. Choice<br>
+        <input type="radio" value="3" name="mycheckbox1"> 3. Choice<br>
+        <input type="radio" value="4" name="mycheckbox1"> 4. Choice<br>
+        <br><br><label> Question3</label><br>
+        <input type="radio" value="1" name="mycheckbox1"> 1. Choice<br>
+        <input type="radio" value="2" name="mycheckbox1"> 2. Choice<br>
+        <input type="radio" value="3" name="mycheckbox1"> 3. Choice<br>
+        <input type="radio" value="4" name="mycheckbox1"> 4. Choice<br>
       </div>
-    </form>
-    <div class="result" id="results">
-      Your Response has been Submitted Successfully
+      <br><br><br>
+        <input type="submit" id="submit">
+      </form>
     </div>
+    <div class="result" id="results">Your Response has been Submitted Successfully</div>
   </body>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script>
+      document.getElementById("submit").addEventListener("click", showResults);
+      function showResults(){
+        alert("Submitted Succesfully");
+      }      
+  </script>
   <script src="https://use.fontawesome.com/3bfa7ea63a.js"></script>
 </html>
