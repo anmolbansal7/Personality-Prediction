@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>PD</title>
   </head>
@@ -21,7 +25,7 @@
       </ul>
     </nav>
     <div class="data">
-        <h2>Choose Category:</h2>
+      <!-- <h2>Choose Category:</h2>
         <select id="selectMe" class="filter">
           <option value="option1">Choose One</option>
           <option value="option2">Extraverted</option>
@@ -29,56 +33,66 @@
           <option value="option4">Dependable</option>
           <option value="option5">Lively</option>
           <option value="option6">Responsible</option>
-        </select>
+        </select> -->
+      <input
+        type="text"
+        id="myInput"
+        class="searchbar"
+        onkeyup="searchTable()"
+        placeholder="Search for Category"
+        title="Type in a name"
+      />
 
-        <div id="option1" class="group">         
-        </div>
-        <div id="option2" class="group">
-          <table id="customers">
-            <tr>
-              <th>Applicant ID</th>
-              <th>Name of Applicant</th>
-              <th>Gender</th>
-              <th>Age</th>
-              <th>Openness</th>
-              <th>Neuroticism</th>
-              <th>Conscientiouness</th>
-              <th>Agreeableness</th>
-              <th>Extraversion</th>
-              <th>Personality</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>Extraverted</td>
-            </tr>
-          </table>
-        </div>
-        <div id="option3" class="group">zxcv
-
-        </div>
-        <div id="option5" class="group">qwerty
-
-        </div>
+      <table id="Applicants">
+        <tr>
+          <th>Applicant ID</th>
+          <th>Name of Applicant</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Openness</th>
+          <th>Neuroticism</th>
+          <th>Conscientiouness</th>
+          <th>Agreeableness</th>
+          <th>Extraversion</th>
+          <th>Personality</th>
+        </tr>
+        {% for apply in applicants %}
+        <tr>
+          <td>{{apply.app_id}}</td>
+          <td>{{apply.name}}</td>
+          <td>{{apply.gender}}</td>
+          <td>{{apply.age}}</td>
+          <td>{{apply.o}}</td>
+          <td>{{apply.n}}</td>
+          <td>{{apply.c}}</td>
+          <td>{{apply.a}}</td>
+          <td>{{apply.e}}</td>
+          <td>{{apply.Personality}}</td>
+        </tr>
+        {% endfor %}
+      </table>
     </div>
   </body>
   <script>
-    $(document).ready(function () {
-      $('.group').hide();
-      $('#option1').show();
-      $('#selectMe').change(function () {
-        $('.group').hide();
-        $('#'+$(this).val()).show();
-      })
-    });
-
- </script>
+    //search for table
+    function searchTable() {
+      var input, filter, table, tr, th, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("Applicants");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        th = tr[i].getElementsByTagName("td")[9];
+        if (th) {
+          txtValue = th.textContent || th.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
   <script src="https://use.fontawesome.com/3bfa7ea63a.js"></script>
 </html>

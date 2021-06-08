@@ -152,7 +152,7 @@ h2 {
   font-weight: 500;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+#id, #name, #gender, #age {
   width: 400px;
   height: 45px;
   color: #505f98;
@@ -178,7 +178,7 @@ button {
   padding: 1%;
   cursor: pointer;
 }
-#submit {
+.sub-btn {
   width: 250px;
   height: 42px;
   border: 2px solid #091133;
@@ -226,22 +226,31 @@ button:hover {
 }
 
 
-#customers {
+#Applicants {
   border-collapse: collapse;
   width: 100%;
 }
 
-#customers td, #customers th {
+#Applicants td, #Applicants th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers th {
+#Applicants th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #505f98;
   color: white;
+}
+
+.searchbar, #myInput{
+  width: 350px;
+  height: 36px;
+  padding: 0.5%;
+  border: 2px solid #091133;
+  font-size: 18px;
+  margin-top: 2%;
 }
 
 .result{
@@ -252,4 +261,15 @@ button:hover {
   align-content: center;
   height: 92vh;
   font-size: 30px;
+}
+
+.quiz-pic{
+  float: right;
+  margin-left: 60%;
+  position: fixed;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
 }
