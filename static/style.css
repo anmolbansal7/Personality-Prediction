@@ -7,6 +7,7 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  background-color: #fbfbfd;
 }
 
 .navbar {
@@ -144,6 +145,8 @@ body {
   font-size: 16px;
   padding: 2% 3% 4% 3%;
   margin-right: 5%;
+  text-decoration: none;
+  text-align: center;
 }
 
 h2 {
@@ -152,7 +155,7 @@ h2 {
   font-weight: 500;
 }
 
-#id, #name, #gender, #age {
+#id, #name, #gender, #age, #mailid, #loginID, #loginPass {
   width: 400px;
   height: 45px;
   color: #505f98;
@@ -251,6 +254,7 @@ button:hover {
   border: 2px solid #091133;
   font-size: 18px;
   margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .result{
@@ -272,4 +276,30 @@ button:hover {
 .main{
   display: flex;
   flex-direction: row;
+}
+.know-more {
+  background-color: white !important;
+  color: #37447e;
+  padding: 2px 9px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.know-more:hover {
+  cursor: pointer;
+}
+
+#ocean, #personalities {
+  margin: 5% 5%;
+}
+#intro, #intro2, #intro3 {
+  margin: 5% 15%;
+}
+
+.card {
+  background-color: #fbfbfd;
+}
+
+.top-margin {
+  margin-top: 100px !important;
 }
