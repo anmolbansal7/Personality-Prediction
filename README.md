@@ -6,5 +6,8 @@ The fundamental objective of our project is to provide an efficient screening sy
 3.	To assist them with picking the most reasonable up-and-comer in less time
 4.	To provide a software/model for job seekers to analyse their resume and build their resume in accordance with the requirements
 
+Figma Design File:
+[Figma Link](https://www.figma.com/file/rWTOaHtSFfqcCpFoKEYk6V/College-Projects?node-id=201%3A39)
+
 Refer this for further details:
 [Project Report.pdf](https://github.com/anmolbansal7/Personality-Prediction/files/7789203/Project.Report.pdf)
